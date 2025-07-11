@@ -13,6 +13,7 @@
         "doctrine/doctrine-bundle": "^2.15",
         "doctrine/doctrine-migrations-bundle": "^3.4",
         "doctrine/orm": "^3.5",
+        "inspector-apm/inspector-symfony": "^1.8",
         "meilisearch/meilisearch-php": "^1.15",
         "mezcalito/ux-search": "*",
         "nyholm/psr7": "^1.0",
