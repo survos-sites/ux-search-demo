@@ -60,17 +60,17 @@ class Jeopardy
         },
 
         #[ORM\Column(length: 255)]
+        public /* private(set) */ string $category {
+            set => self::cleanupCategory($value);
+        },
+
+        #[ORM\Column(length: 255)]
         #[ApiProperty(extraProperties: ['list' => true])]
-        public ?string    $answer = null {
+        public ?string    $answer  {
             set {
 //                if (strlen($value) >= 244) { dd($value); }
                 $this->answer = mb_substr($value, 0, 255);
             }
-        },
-
-        #[ORM\Column(length: 255)]
-        public /* private(set) */ string $category {
-            set => self::cleanupCategory($value);
         },
 
         #[ORM\Column(type: Types::INTEGER, nullable: true)]

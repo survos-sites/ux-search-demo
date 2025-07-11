@@ -21,10 +21,10 @@ class JeopardyRepository extends ServiceEntityRepository
     //     */
     //    public function findByExampleField($value): array
     //    {
-    //        return $this->createQueryBuilder('j')
-    //            ->andWhere('j.exampleField = :val')
+    //        return $this->createQueryBuilder('q')
+    //            ->andWhere('q.exampleField = :val')
     //            ->setParameter('val', $value)
-    //            ->orderBy('j.id', 'ASC')
+    //            ->orderBy('q.id', 'ASC')
     //            ->setMaxResults(10)
     //            ->getQuery()
     //            ->getResult()
@@ -33,8 +33,8 @@ class JeopardyRepository extends ServiceEntityRepository
 
     //    public function findOneBySomeField($value): ?Jeopardy
     //    {
-    //        return $this->createQueryBuilder('j')
-    //            ->andWhere('j.exampleField = :val')
+    //        return $this->createQueryBuilder('q')
+    //            ->andWhere('q.exampleField = :val')
     //            ->setParameter('val', $value)
     //            ->getQuery()
     //            ->getOneOrNullResult()
