@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24c6034c1145c0787b5a864b65503d99",
+    "content-hash": "8aaec98c0aeb6b2bfbb6bfcb3bc67d4c",
     "packages": [
         {
             "name": "composer/semver",
@@ -1349,17 +1349,11 @@
         },
         {
             "name": "mezcalito/ux-search",
-            "version": "0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Mezcalito/ux-search.git",
-                "reference": "039116730876de3966f01ee6984e93d894325782"
-            },
+            "version": "dev-tac",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Mezcalito/ux-search/zipball/039116730876de3966f01ee6984e93d894325782",
-                "reference": "039116730876de3966f01ee6984e93d894325782",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/tac/g/tacman/ux-search",
+                "reference": "039116730876de3966f01ee6984e93d894325782"
             },
             "require": {
                 "nyholm/psr7": "^1.0",
@@ -1403,7 +1397,12 @@
                     "Mezcalito\\UxSearchBundle\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Mezcalito\\UxSearchBundle\\Tests\\": "tests",
+                    "Mezcalito\\UxSearchBundle\\Tests\\TestApplication\\": "tests/TestApplication/src"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -1416,11 +1415,9 @@
                 "search",
                 "symfony-ux"
             ],
-            "support": {
-                "issues": "https://github.com/Mezcalito/ux-search/issues",
-                "source": "https://github.com/Mezcalito/ux-search/tree/0.3.0"
-            },
-            "time": "2025-04-24T09:54:16+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "monolog/monolog",
@@ -10344,7 +10341,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "mezcalito/ux-search": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

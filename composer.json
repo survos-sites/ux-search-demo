@@ -107,5 +107,11 @@
         "symfony/maker-bundle": "^1.0",
         "symfony/stopwatch": "7.3.*",
         "symfony/web-profiler-bundle": "7.3.*"
+    },
+    "repositories": {
+        "tacman_UX_search": {
+            "type": "path",
+            "url": "~/g/tacman/ux-search"
+        }
     }
 }

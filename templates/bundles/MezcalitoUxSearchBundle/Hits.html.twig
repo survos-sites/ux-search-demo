@@ -1,0 +1,35 @@
+{# templates/bundles/AcmeUserBundle/registration/confirmed.html.twig #}
+{# the special '!' prefix avoids errors when extending from an overridden template #}
+{% extends "@!MezcalitoUxSearch/Hits.html.twig" %}
+
+{% set shortClass = results.indexUid|split('\\')|last %}
+
+{% block content %}
+    <code>
+    @{{ shortClass }}
+    </code>
+    {{ include(shortClass ~ '/Hits.html.twig') }}
+{#    {{ block(shortClass ~ 'Hit') }}#}
+
+{#    {{ dump() }}#}
+{#    {{ dump(__props) }}#}
+{#{{ dump(results) }}#}
+{#{{ dump(results.indexUid) }}#}
+{#{{ dump(attributes) }}#}
+{% endblock %}
+
+{% block hit %}
+    {{ include(shortClass ~ '/Hit.html.twig', {hit: hit}) }}
+{#    <div class="blockquote">#}
+{#        <code>#}
+{#            {% set shortClass = results.indexUid|split('\\')|last %}#}
+{#            @{{ shortClass }}#}
+{#        </code>#}
+{#        {{ block(shortClass ~ 'Hit') }}#}
+{#    </div>#}
+{#    {{ parent() }}#}
+{% endblock %}
+
+{% block JeopardyHit %}
+        {{ hit.data.question }}
+{% endblock %}

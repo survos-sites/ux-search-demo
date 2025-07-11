@@ -1,3 +1,6 @@
 mezcalito_ux_search:
+    default_adapter: 'default'
     adapters:
+#        default: 'meilisearch:https://127.0.0.1:7701'
         default: '%env(MEZCALITO_UX_SEARCH_DEFAULT_DSN)%'
+        orm: '%env(MEZCALITO_UX_SEARCH_ORM_DSN)%'
