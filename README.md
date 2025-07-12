@@ -1,3 +1,41 @@
+# UX Search Demo
+
+A simple demo of the mezcalito/ux-search
+
+```bash
+git clone git@github.com:survos-sites/ux-search-demo 
+cd ux-search-demo
+```
+
+## Configure your database
+
+### Sqlite
+
+```bash
+bin/console doctrine:schema:update --force
+```
+
+### Postgres
+
+```bash
+bin/console doctrine:migrations:migrate -n
+```
+
+## Import the Jeopardy data
+
+```bash
+bin/console app:jeopardy --limit 5000
+```
+
+## Run it
+
+```bash
+symfony server:start -d
+symfony open:local
+```
+
+## Recreating this demo
+
 
 ```bash
 symfony new ux-search-demo --webapp && cd ux-search-demo
