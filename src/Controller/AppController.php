@@ -2,17 +2,20 @@
 
 namespace App\Controller;
 
+use Symfony\Bridge\Twig\Attribute\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 final class AppController extends AbstractController
 {
-    #[Route('/', name: 'app_app')]
-    public function index(): Response
+    #[Route('/{searchName}', name: 'app_app')]
+    #[Template('app/index.html.twig')]
+    public function index(string $searchName='j2'): Response|array
     {
-        return $this->render('app/index.html.twig', [
-            'controller_name' => 'AppController',
-        ]);
+        return [
+            'searchName' => $searchName,
+
+        ];
     }
 }

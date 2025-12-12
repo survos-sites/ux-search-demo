@@ -1,5 +1,7 @@
 twig:
     file_name_pattern: '*.twig'
+    globals:
+        _sc_locale: locale_display
 
 when@test:
     twig:

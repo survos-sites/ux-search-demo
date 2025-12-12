@@ -3,9 +3,7 @@
 {% block title %}Hello AppController!{% endblock %}
 
 {% block body %}
-
-    <twig:Mezcalito:UxSearch:Layout name="JeopardyMeiliSearch">
-
+    <twig:Mezcalito:UxSearch:Layout name="{{ searchName|default('JeopardyMeiliSearch') }}">
     </twig:Mezcalito:UxSearch:Layout>
 
 {% endblock %}
